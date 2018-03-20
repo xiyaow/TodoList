@@ -16,8 +16,12 @@ $("input[type='text']").on("keypress", function(event){
 		//grabbing new todo text from input
 		var todoText = $(this).val();
 		$(this).val("");
+		if(todoText === ""){
+			alert("Please input your new Todo List");
+		}else{
 		//add a new li and add to ul
-		$("ul").append("<li><span><i class='fas fa-trash-alt'></i></span> " + todoText + "</li>");
+			$("ul").append("<li><span><i class='fas fa-trash-alt'></i></span> " + todoText + "</li>");
+		}
 	}
 });
 
